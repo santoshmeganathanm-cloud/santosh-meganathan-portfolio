@@ -167,8 +167,8 @@ function App() {
           <figure className="portrait-card">
             <div className="portrait-frame">
               <img
-                src={`${import.meta.env.BASE_URL}images/portfolio-hero.jpg`}
-                alt="Cinematic portrait of Santosh Meganathan with AI, cloud, and project delivery motifs"
+                src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
+                alt="Professional headshot of Santosh Meganathan"
               />
             </div>
             <figcaption>Bengaluru, Karnataka, India</figcaption>

@@ -15,7 +15,7 @@ Create a production build with `npm run build`; preview it locally with `npm run
 
 The profile summary, experience, skills, certifications, contact details, and LinkedIn URL are taken from the resume and profile details supplied for this portfolio.
 
-The hero uses the cinematic composite at `public/images/portfolio-hero.jpg`, created locally from the supplied headshot with subtle AI, cloud, and project-delivery visuals. The original portrait remains at `public/images/headshot.jpg`. Replace the hero asset at the same path or update its reference in `src/App.tsx`.
+The supplied professional headshot is at `public/images/headshot.jpg`. To replace it, use the same path or update the image reference in `src/App.tsx`.
 
 ## GitHub Pages
 

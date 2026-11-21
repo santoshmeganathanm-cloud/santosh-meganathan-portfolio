@@ -1,6 +1,10 @@
 # Santosh Meganathan — Portfolio
 
 A responsive personal portfolio built with React, TypeScript, and Vite.
+The landing page features an original Three.js hero visual with a static
+fallback for browsers without WebGL; the animation respects reduced-motion
+preferences. Experience, skills, certifications, and contact information remain
+available in conventional scroll sections.
 
 ## Run locally
 

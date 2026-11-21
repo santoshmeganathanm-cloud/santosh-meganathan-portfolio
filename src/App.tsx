@@ -1,10 +1,12 @@
+import HeroScene from "./HeroScene";
+
 const linkedinUrl = "https://www.linkedin.com/in/santosh-meganathan-29390121a/";
 
 const navigation = [
-  { label: "Profile", href: "#profile" },
+  { label: "About", href: "#profile" },
   { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Certifications", href: "#certifications" },
+  { label: "Expertise", href: "#skills" },
+  { label: "Learning", href: "#certifications" },
 ];
 
 const skills = [
@@ -125,7 +127,7 @@ function App() {
     <div className="site-shell">
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Santosh Meganathan, home">
-          SM<span className="wordmark-period">.</span>
+          SM<span>.</span>
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           {navigation.map((item) => (
@@ -134,48 +136,66 @@ function App() {
             </a>
           ))}
         </nav>
-        <span className="header-note">
-          PORTFOLIO <span>·</span> {currentYear}
-        </span>
+        <a className="header-contact" href="#contact">
+          Get in touch <span aria-hidden="true">↗</span>
+        </a>
       </header>
 
       <main id="top">
         <section className="hero section-wrap" aria-labelledby="hero-title">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="eyebrow-mark" /> PERSONAL PORTFOLIO
+              <span className="eyebrow-mark" /> AI · CLOUD · DELIVERY
             </p>
             <h1 id="hero-title">
               Santosh
               <br />
               <span>Meganathan</span>
             </h1>
-            <p className="hero-roles">
-              AI Functional Consultant <span>·</span> Cloud Consultant
-              <span>·</span> Associate Project Manager <span>·</span> Junior
-              Scrum Master
+            <p className="hero-statement">
+              Making complex work feel <em>clearer.</em>
             </p>
-            <a
-              className="text-link"
-              href={linkedinUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn profile <ArrowIcon />
-            </a>
-          </div>
-          <figure className="portrait-card">
-            <div className="portrait-frame">
+            <p className="hero-roles">
+              AI Functional Consultant at HPE, bringing together people,
+              processes, and technology to move work forward.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#experience">
+                Explore my experience <ArrowIcon />
+              </a>
+              <a
+                className="text-link"
+                href={linkedinUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <figure className="portrait-card">
               <img
                 src={`${import.meta.env.BASE_URL}images/headshot.jpg`}
-                alt="Professional headshot of Santosh Meganathan"
+                alt="Santosh Meganathan"
               />
-            </div>
-            <figcaption>Bengaluru, Karnataka, India</figcaption>
-          </figure>
-          <div className="hero-index" aria-hidden="true">
-            01 / 04
+              <figcaption>
+                <strong>Santosh Meganathan</strong>
+                <span>Bengaluru, India</span>
+              </figcaption>
+            </figure>
           </div>
+
+          <div className="hero-artwork">
+            <HeroScene />
+            <div className="hero-artwork-label">
+              <span className="label-dot" />
+              PEOPLE-FIRST. FUTURE-READY.
+            </div>
+          </div>
+
+          <a className="scroll-cue" href="#profile">
+            <span>Scroll to explore</span>
+            <span className="scroll-cue-line" aria-hidden="true" />
+          </a>
         </section>
 
         <section
@@ -184,46 +204,36 @@ function App() {
           aria-labelledby="profile-title"
         >
           <div className="section-heading">
-            <p className="eyebrow">01 — PROFILE</p>
-            <h2 id="profile-title">Professional summary.</h2>
+            <p className="eyebrow">01 / ABOUT</p>
+            <h2 id="profile-title">Clarity is a team effort.</h2>
           </div>
-          <div className="profile-card">
-            <div className="card-label">
-              <span className="label-dot" />
-              <span>ABOUT SANTOSH</span>
-            </div>
-            <div className="profile-content">
+          <div className="profile-layout">
+            <p className="section-lead">
+              I work where business needs meet technology—helping teams turn
+              complex operations into practical, measurable improvements.
+            </p>
+            <div className="profile-copy">
               <p>
-                Results-driven Project Manager skilled in Agile/Scrum, project
-                coordination, stakeholder management, risk mitigation, and SLA
-                governance, with experience supporting hybrid cloud
-                environments. Experienced in leading cross-functional teams,
-                improving processes, and driving projects toward timely and
-                successful delivery.
+                My experience spans AI functional consulting, hybrid-cloud
+                operations, project management, and Agile delivery. I translate
+                stakeholder needs into clear requirements, support teams
+                through delivery, and keep human oversight at the center of
+                responsible AI adoption.
               </p>
               <a
-                className="pending-link"
+                className="text-link"
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                View LinkedIn profile <ArrowIcon />
+                More about my work <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
-          <div className="contact-strip" id="contact">
-            <a href="mailto:Santosh.meganathanm@gmail.com">
-              <span className="contact-label">EMAIL</span>
-              Santosh.meganathanm@gmail.com
-            </a>
-            <a href="tel:+918610253016">
-              <span className="contact-label">PHONE</span>
-              +91-8610250316
-            </a>
-            <a href={linkedinUrl} target="_blank" rel="noreferrer">
-              <span className="contact-label">LINKEDIN</span>
-              santosh-meganathan-29390121a
-            </a>
+          <div className="principle-row" aria-label="Areas of focus">
+            <span>People &amp; process</span>
+            <span>AI with oversight</span>
+            <span>Reliable delivery</span>
           </div>
         </section>
 
@@ -234,32 +244,45 @@ function App() {
         >
           <div className="section-heading section-heading-row">
             <div>
-              <p className="eyebrow">02 — EXPERIENCE</p>
-              <h2 id="experience-title">Professional experience.</h2>
+              <p className="eyebrow">02 / EXPERIENCE</p>
+              <h2 id="experience-title">A path through progress.</h2>
             </div>
             <p className="section-aside">
-              Roles and responsibilities from the supplied resume.
+              Four roles across consulting, cloud operations, and Agile
+              delivery.
             </p>
           </div>
           <div className="experience-list">
             {experience.map((role, index) => (
-              <article className="experience-card" key={`${role.employer}-${role.title}`}>
-                <div className="experience-number">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-                <div className="experience-copy">
-                  <p className="card-overline">{role.dates}</p>
-                  <h3>{role.title}</h3>
-                  <p className="experience-employer">
-                    {role.employer} <span>·</span> {role.location}
-                  </p>
-                  <ul>
-                    {role.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              <details
+                className="experience-card"
+                key={`${role.employer}-${role.title}`}
+              >
+                <summary>
+                  <span className="experience-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="experience-copy">
+                    <span className="card-overline">{role.dates}</span>
+                    <span className="experience-title">{role.title}</span>
+                    <span className="experience-employer">
+                      {role.employer} <span aria-hidden="true">·</span>{" "}
+                      {role.location}
+                    </span>
+                  </span>
+                  <span className="experience-toggle">
+                    <span className="toggle-label">View details</span>
+                    <span className="toggle-icon" aria-hidden="true">
+                      +
+                    </span>
+                  </span>
+                </summary>
+                <ul className="experience-details">
+                  {role.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              </details>
             ))}
           </div>
         </section>
@@ -271,9 +294,12 @@ function App() {
         >
           <div className="skills-panel">
             <div className="skills-heading">
-              <p className="eyebrow">03 — SKILLS</p>
-              <h2 id="skills-title">Core skills.</h2>
-              <p>Capabilities and tools listed in the supplied resume.</p>
+              <p className="eyebrow">03 / EXPERTISE</p>
+              <h2 id="skills-title">A toolkit for moving work forward.</h2>
+              <p>
+                A blend of delivery discipline, operational experience, and
+                emerging AI capabilities.
+              </p>
             </div>
             <ul className="skill-list">
               {skills.map((skill) => (
@@ -289,18 +315,51 @@ function App() {
           aria-labelledby="certifications-title"
         >
           <div className="section-heading">
-            <p className="eyebrow">04 — CERTIFICATIONS</p>
-            <h2 id="certifications-title">Learning &amp; certifications.</h2>
+            <p className="eyebrow">04 / LEARNING</p>
+            <h2 id="certifications-title">Always in progress.</h2>
           </div>
           <ul className="certification-list">
             {certifications.map((certification, index) => (
               <li key={certification}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <strong>{certification}</strong>
-                <ArrowIcon />
+                <span className="certification-mark" aria-hidden="true">
+                  ↗
+                </span>
               </li>
             ))}
           </ul>
+        </section>
+
+        <section
+          className="contact-section section-wrap"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <p className="eyebrow">05 / CONTACT</p>
+          <div className="contact-layout">
+            <h2 id="contact-title">
+              Let’s make
+              <br />
+              <em>good work</em> happen.
+            </h2>
+            <div className="contact-details">
+              <p>For conversations about AI, cloud operations, or project delivery.</p>
+              <a
+                className="contact-email"
+                href="mailto:Santosh.meganathan@gmail.com"
+              >
+                Santosh.meganathan@gmail.com{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <div className="contact-links">
+                <a href="tel:+918610253016">+91 86102 53016</a>
+                <a href={linkedinUrl} target="_blank" rel="noreferrer">
+                  LinkedIn <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
